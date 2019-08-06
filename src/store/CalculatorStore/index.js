@@ -14,6 +14,7 @@ class CalculatorStore {
 
   @action.bound clearExpression() {
     this.inputExpression = "";
+    this.evaluatedResult = "";
   }
 
   @action.bound deleteLastCharInExpression() {
