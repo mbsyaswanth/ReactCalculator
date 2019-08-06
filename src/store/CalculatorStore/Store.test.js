@@ -33,4 +33,10 @@ describe("Calculator Store", () => {
     store.addToExpression("1+55*2");
     expect(store.result()).toBe(111);
   });
+
+  it("should check isvalid input function is working properly", () => {
+    store.addToExpression("1+55*");
+    expect(store.isValidInput("-")).toBe(false);
+    expect(store.isValidInput("5")).toBe(true);
+  });
 });
