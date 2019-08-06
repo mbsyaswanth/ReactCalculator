@@ -19,7 +19,7 @@
         [] isValidExpression
 
     [] actions
-        [] addToExpression 25mins 10:31
+        [] addToExpression 25mins 10:31 
         [] displayResult
         [] clearExpression
         [] deleteLastCharInExpression
