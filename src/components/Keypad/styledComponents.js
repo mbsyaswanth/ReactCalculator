@@ -6,5 +6,4 @@ export const KeysContainer = styled.div`
   flex-wrap: wrap;
   flex-direction: row;
   background: black;
-  padding: 10px;
 `;
