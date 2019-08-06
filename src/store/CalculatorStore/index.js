@@ -2,7 +2,7 @@ import { observable, action, computed } from "mobx";
 
 class CalculatorStore {
   @observable inputExpression = "";
-
+  @observable evaluatedResult = "";
   @action.bound addToExpression(input) {
     if (this.isValidInput(input)) {
       this.inputExpression = this.inputExpression.concat(input);
@@ -24,9 +24,13 @@ class CalculatorStore {
     return this.inputExpression[this.inputExpression.length - 1];
   }
 
-  result = () => {
-    return eval(this.inputExpression);
-  };
+  @action.bound result() {
+    try {
+      this.evaluatedResult = eval(this.inputExpression);
+    } catch {
+      this.evaluatedResult = eval(this.inputExpression);
+    }
+  }
 
   isValidInput = input => {
     const operators = ["+", "-", "*", "/", "%"];

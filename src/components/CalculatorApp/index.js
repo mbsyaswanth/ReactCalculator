@@ -14,7 +14,7 @@ class CalculatorApp extends Component {
     return (
       <CalculatorContainer>
         <CalculatorInput input={store.inputExpression} />
-        {/* <Result result={store.result} /> */}
+        <Result result={store.evaluatedResult} />
         <Keypad store={store} />
       </CalculatorContainer>
     );
