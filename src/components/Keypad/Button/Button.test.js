@@ -16,4 +16,19 @@ describe("Button component", () => {
     expect(spyFunc).toBeCalled();
     expect(spyFunc).toBeCalledWith("1");
   });
+
+  it("should call without parameters for values Del,c,=", () => {
+    const spyFunc = jest.fn();
+    const { getByText, rerender } = render(
+      <Button action={spyFunc} displayText="Del" />
+    );
+    fireEvent.click(getByText("Del"));
+    expect(spyFunc).toBeCalledWith();
+    rerender(<Button action={spyFunc} displayText="c" />);
+    fireEvent.click(getByText("c"));
+    expect(spyFunc).toBeCalledWith();
+    rerender(<Button action={spyFunc} displayText="=" />);
+    fireEvent.click(getByText("="));
+    expect(spyFunc).toBeCalledWith();
+  });
 });
