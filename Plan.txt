@@ -1,8 +1,8 @@
 [] components
     [] CalculatorApp
         [] CalculatorInput
-        [] Result
-        [] Keypad
+        [*] Result
+        [x] Keypad
             [x] Button
     
 

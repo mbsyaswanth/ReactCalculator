@@ -7,6 +7,6 @@ export const StyleButton = styled.input`
   border-radius: 50%;
   color: #fff;
   font-size: 14px;
-  margin: 1em;
-  padding: 10px;
+  margin: 2px;
+  padding: 2px;
 `;
