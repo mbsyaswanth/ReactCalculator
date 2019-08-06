@@ -17,4 +17,9 @@ describe("Calculator Store", () => {
     store.clearExpression();
     expect(store.inputExpression).toBe("");
   });
+
+  it("should test if last entered input returns correctly", () => {
+    store.addToExpression("1+56");
+    expect(store.lastEnteredInput).toBe(6);
+  });
 });
