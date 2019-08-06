@@ -18,6 +18,10 @@ class CalculatorStore {
   @computed get lastEnteredInput() {
     return parseInt(this.inputExpression[this.inputExpression.length - 1]);
   }
+
+  result = () => {
+    return eval(this.inputExpression) + 1;
+  };
 }
 
 export default CalculatorStore;
