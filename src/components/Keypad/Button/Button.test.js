@@ -14,5 +14,6 @@ describe("Button component", () => {
     const { getByText } = render(<Button action={spyFunc} displayText="1" />);
     fireEvent.click(getByText("1"));
     expect(spyFunc).toBeCalled();
+    expect(spyFunc).toBeCalledWith("1");
   });
 });
