@@ -1,3 +1,5 @@
+import CalculatorStore from "./index";
+
 let store;
 beforeEach(() => {
   store = new CalculatorStore();
