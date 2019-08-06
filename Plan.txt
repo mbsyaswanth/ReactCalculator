@@ -1,0 +1,26 @@
+[] components
+    [] CalculatorApp
+        [] CalculatorInput
+        [] Result
+        [] Keypad
+            [] Button
+    
+
+[] store
+    [] observables
+        [] inputExpression
+        [x] showResult
+
+    [] normal function
+        [] result - eval() function
+
+    [] computed
+        [] lastEnteredInput (length-1)
+        [] isValidExpression
+
+    [] actions
+        [] addToExpression 25mins 10:31
+        [] displayResult
+        [] clearExpression
+        [] deleteLastCharInExpression
+
