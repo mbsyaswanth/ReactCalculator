@@ -11,4 +11,10 @@ describe("Calculator Store", () => {
     store.addToExpression("1");
     expect(store.inputExpression).toBe("1");
   });
+
+  it("should should test if clearExpression clears the inputExpression", () => {
+    store.addToExpression("12*3");
+    store.clearExpression();
+    expect(store.inputExpression).toBe("");
+  });
 });

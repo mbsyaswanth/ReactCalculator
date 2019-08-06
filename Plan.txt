@@ -9,7 +9,7 @@
 [] store
     [] observables
         [] inputExpression
-        [x] showResult
+        [] showResult
 
     [] normal function
         [] result - eval() function
@@ -19,8 +19,8 @@
         [] isValidExpression
 
     [] actions
-        [] addToExpression 25mins 10:31 
-        [] displayResult
-        [] clearExpression
+        [x] addToExpression 25mins+20mins 10:31 11:00
+        [] displayResult 
+        [*] clearExpression
         [] deleteLastCharInExpression
 
