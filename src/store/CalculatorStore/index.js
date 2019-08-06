@@ -16,7 +16,7 @@ class CalculatorStore {
   }
 
   @computed get lastEnteredInput() {
-    return parseInt(this.inputExpression[this.inputExpression.length - 1]);
+    return this.inputExpression[this.inputExpression.length - 1];
   }
 
   result = () => {
@@ -25,8 +25,11 @@ class CalculatorStore {
 
   isValidInput = input => {
     const operators = ["+", "-", "*", "/", "%"];
-    if (operators.includes(input)) {
-      return input === this.lastEnteredInput;
+    if (
+      operators.includes(input) &&
+      operators.includes(this.lastEnteredInput)
+    ) {
+      return false;
     }
     return true;
   };

@@ -20,7 +20,7 @@ describe("Calculator Store", () => {
 
   it("should test if last entered input returns correctly", () => {
     store.addToExpression("1+56");
-    expect(store.lastEnteredInput).toBe(6);
+    expect(store.lastEnteredInput).toBe("6");
   });
 
   it("should delete last char entered in input", () => {
@@ -38,5 +38,6 @@ describe("Calculator Store", () => {
     store.addToExpression("1+55*");
     expect(store.isValidInput("-")).toBe(false);
     expect(store.isValidInput("5")).toBe(true);
+    expect(store.isValidInput("*")).toBe(false);
   });
 });
