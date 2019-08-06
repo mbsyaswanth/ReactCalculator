@@ -4,4 +4,5 @@ export const ResultContainer = styled.div`
   height: 40px;
   font-size: 40px;
   color: #fff;
+  text-align: right;
 `;

@@ -21,4 +21,8 @@ export const StyleButton = styled.input`
   font-size: 14px;
   margin: 2px;
   padding: 2px;
+  border-style: none;
+  :focus {
+    outline: none;
+  }
 `;

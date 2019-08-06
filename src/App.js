@@ -6,7 +6,7 @@ import Counter from "./Counter";
 import CalculatorApp from "./components/CalculatorApp";
 function App() {
   return (
-    <div>
+    <div className="App">
       <CalculatorApp />
     </div>
   );
