@@ -28,4 +28,9 @@ describe("Calculator Store", () => {
     store.deleteLastCharInExpression();
     expect(store.inputExpression).toBe("1+5");
   });
+
+  it("should compute and return the result of the expression", () => {
+    store.addToExpression("1+55*2");
+    expect(store.result()).toBe(112);
+  });
 });
