@@ -34,7 +34,8 @@ describe("Calculator Store", () => {
 
   it("should compute and return the result of the expression", () => {
     store.addToExpression("1+55*2");
-    expect(store.result()).toBe(111);
+    store.result();
+    expect(store.evaluatedResult).toBe(111);
   });
 
   it("should check isvalid input function is working properly", () => {
