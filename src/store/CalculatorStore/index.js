@@ -11,6 +11,10 @@ class CalculatorStore {
     this.inputExpression = "";
   }
 
+  @action.bound deleteLastCharInExpression() {
+    this.inputExpression = this.inputExpression.slice(0, -1);
+  }
+
   @computed get lastEnteredInput() {
     return parseInt(this.inputExpression[this.inputExpression.length - 1]);
   }
