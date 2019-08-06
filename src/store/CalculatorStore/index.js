@@ -22,6 +22,14 @@ class CalculatorStore {
   result = () => {
     return eval(this.inputExpression);
   };
+
+  isValidInput = input => {
+    const operators = ["+", "-", "*", "/", "%"];
+    if (operators.includes(input)) {
+      return input === this.lastEnteredInput;
+    }
+    return true;
+  };
 }
 
 export default CalculatorStore;
