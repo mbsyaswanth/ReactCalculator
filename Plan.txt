@@ -3,7 +3,7 @@
         [] CalculatorInput
         [] Result
         [] Keypad
-            [] Button
+            [*] Button
     
 
 [] store
@@ -13,7 +13,7 @@
 
     [] normal function
         [x] result - eval() function 
-        [] isValidInput
+        [x] isValidInput
 
     [] computed
         [x] lastEnteredInput (length-1) 15min 
