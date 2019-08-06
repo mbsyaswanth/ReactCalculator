@@ -3,12 +3,12 @@
         [] CalculatorInput
         [] Result
         [] Keypad
-            [*] Button
+            [x] Button
     
 
 [] store
     [] observables
-        [] inputExpression
+        [x] inputExpression
         [] showResult
 
     [] normal function

@@ -1,19 +1,24 @@
 import React, { Component } from "react";
-
+import { StyleButton } from "./styledComponents";
 class Button extends Component {
   handleClick = event => {
+    const { displayText, action } = this.props;
     const specialButtons = ["Del", "c", "="];
-    if (specialButtons.includes(this.props.displayText)) {
-      this.props.action();
+    if (specialButtons.includes(displayText)) {
+      action();
       return;
     }
-    this.props.action(event.target.value);
+    action(event.target.value);
   };
   render() {
-    const { action, displayText } = this.props;
+    const { displayText } = this.props;
     return (
       <div>
-        <input type="button" onClick={this.handleClick} value={displayText} />
+        <StyleButton
+          type="button"
+          onClick={this.handleClick}
+          value={displayText}
+        />
       </div>
     );
   }
