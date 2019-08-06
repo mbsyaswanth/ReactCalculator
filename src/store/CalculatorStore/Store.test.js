@@ -22,4 +22,10 @@ describe("Calculator Store", () => {
     store.addToExpression("1+56");
     expect(store.lastEnteredInput).toBe(6);
   });
+
+  it("should delete last char entered in input", () => {
+    store.addToExpression("1+56");
+    store.deleteLastCharInExpression();
+    expect(store.inputExpression).toBe("1+5");
+  });
 });

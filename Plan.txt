@@ -15,12 +15,12 @@
         [] result - eval() function 
 
     [] computed
-        [] lastEnteredInput (length-1) 15min 
+        [x] lastEnteredInput (length-1) 15min 
         [] isValidExpression
 
     [] actions
         [x] addToExpression 25mins+20mins 10:31 11:00
         [] displayResult 
         [x] clearExpression
-        [] deleteLastCharInExpression 15min
+        [*] deleteLastCharInExpression 15min
 
