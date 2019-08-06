@@ -17,8 +17,10 @@ describe("Calculator Store", () => {
 
   it("should should test if clearExpression clears the inputExpression", () => {
     store.addToExpression("12*3");
+    store.result();
     store.clearExpression();
     expect(store.inputExpression).toBe("");
+    expect(store.evaluatedResult).toBe("");
   });
 
   it("should test if last entered input returns correctly", () => {
