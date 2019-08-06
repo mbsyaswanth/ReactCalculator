@@ -4,7 +4,12 @@ class CalculatorStore {
   @observable inputExpression = "";
 
   @action.bound addToExpression(input) {
-    this.inputExpression = this.inputExpression.concat(input);
+    if (this.isValidInput(input)) {
+      this.inputExpression = this.inputExpression.concat(input);
+    } else {
+      this.deleteLastCharInExpression();
+      this.inputExpression = this.inputExpression.concat(input);
+    }
   }
 
   @action.bound clearExpression() {
