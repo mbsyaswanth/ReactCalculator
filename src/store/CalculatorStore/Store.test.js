@@ -10,6 +10,9 @@ describe("Calculator Store", () => {
     expect(store.inputExpression).toBe("");
     store.addToExpression("1");
     expect(store.inputExpression).toBe("1");
+    store.addToExpression("*");
+    store.addToExpression("-");
+    expect(store.inputExpression).toBe("1-");
   });
 
   it("should should test if clearExpression clears the inputExpression", () => {
