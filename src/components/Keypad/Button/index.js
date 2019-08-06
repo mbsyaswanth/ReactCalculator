@@ -2,6 +2,11 @@ import React, { Component } from "react";
 
 class Button extends Component {
   handleClick = event => {
+    const specialButtons = ["Del", "c", "="];
+    if (specialButtons.includes(this.props.displayText)) {
+      this.props.action();
+      return;
+    }
     this.props.action(event.target.value);
   };
   render() {
