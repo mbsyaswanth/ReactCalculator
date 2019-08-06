@@ -10,6 +10,10 @@ class CalculatorStore {
   @action.bound clearExpression() {
     this.inputExpression = "";
   }
+
+  @computed get lastEnteredInput() {
+    return parseInt(this.inputExpression[this.inputExpression.length - 1]);
+  }
 }
 
 export default CalculatorStore;
