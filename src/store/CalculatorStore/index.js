@@ -20,7 +20,7 @@ class CalculatorStore {
   }
 
   result = () => {
-    return eval(this.inputExpression) + 1;
+    return eval(this.inputExpression);
   };
 }
 
