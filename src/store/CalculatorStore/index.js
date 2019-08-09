@@ -28,8 +28,8 @@ class CalculatorStore {
   @action.bound result() {
     try {
       this.evaluatedResult = eval(this.inputExpression);
-    } catch {
-      this.evaluatedResult = eval(this.inputExpression);
+    } catch (error) {
+      this.evaluatedResult = "invalid";
     }
   }
 
